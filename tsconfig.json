@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "target": "ES6",
+      "module": "commonjs",
+      "outDir": "./build",
+      "rootDir": "./src",
+      "strict": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+}
