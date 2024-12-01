@@ -2,6 +2,7 @@ export default interface AccountConfig {
     //Login details
     login: string,
     password: string,
+    steamID: string,
     mail?: object,
     maFileData?: object,
     rememberPassword: boolean,
@@ -10,7 +11,7 @@ export default interface AccountConfig {
     dontRememberMachine: boolean,
 
     //Game and profile details
-    games: Array<number>,
+    games: Array<Number>,
     persona: number,
 
     steam: {

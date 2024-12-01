@@ -141,3 +141,6 @@ maFiles
 
 #No file leaks
 sageAccounts.json
+
+#Dont import account configs (steamids always start with a 7)
+7*.ts

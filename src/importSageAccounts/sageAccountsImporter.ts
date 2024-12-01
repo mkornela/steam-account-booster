@@ -7,13 +7,13 @@ const accounts = JSON.parse(fs.readFileSync('./sageAccounts.json', 'utf-8'));
 // Iterate through each account and generate a TypeScript file
 accounts.forEach((account: any, index: number) => {
     const configTemplate = `
-import AccountConfig from "../src/Interfaces/AccountConfig"
-import freeApps from "../src/Steam/freeApps"
+import AccountConfig from "../Interfaces/AccountConfig"
+import { freeApps } from "../Steam/freeApps"
 
-export const config: Config = {
+export const config: AccountConfig = {
     login: "${account.user.username}",
     password: "${account.user.password}",
-    steamID: ${account.id},
+    steamID: "${account.id}",
     mail: {
         address: "${account.email.address}",
         password: "${account.email.password}"
