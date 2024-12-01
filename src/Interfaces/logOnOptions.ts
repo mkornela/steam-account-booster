@@ -1,4 +1,4 @@
-interface AccountConfig {
+export default interface AccountConfig {
     accountName: string,
     password: string,
     rememberPassword: boolean,
