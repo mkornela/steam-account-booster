@@ -138,3 +138,6 @@ config.js
 
 #Personal use
 maFiles
+
+#No file leaks
+sageAccounts.json

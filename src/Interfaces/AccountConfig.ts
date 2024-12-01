@@ -2,13 +2,15 @@ export default interface AccountConfig {
     //Login details
     login: string,
     password: string,
+    mail?: object,
+    maFileData?: object,
     rememberPassword: boolean,
     machineName: string,
-    clientOS: Number,
+    clientOS: number,
     dontRememberMachine: boolean,
 
     //Game and profile details
-    games: Array<Number>,
-    persona: Number,
+    games: Array<number>,
+    persona: number,
     autoAcceptFriendRequests: boolean
 }

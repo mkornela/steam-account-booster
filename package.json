@@ -21,6 +21,15 @@
   "author": "deeM",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/steam-user": "^5.0.3",
+    "@types/steamcommunity": "^3.43.7",
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "steam-user": "^5.2.0",
+    "steamcommunity": "^3.48.5"
   }
 }

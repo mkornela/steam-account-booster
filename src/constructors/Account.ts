@@ -1,15 +1,15 @@
-import imports from "../imports";
+import SteamUser = require('steam-user');
+import SteamCommunity = require('steamcommunity');
 import AccountConfig from "../Interfaces/AccountConfig";
-import logOnOptions from "../Interfaces/logOnOptions";
-import SteamID64 from "../Interfaces/SteamID";
+import { SteamID64 } from "../Interfaces/SteamID";
 import SteamRelationship from "../Steam/Relationship";
 
 export default function Account(accountConfig: AccountConfig){
 
-    var client = new imports.SteamUser();
-    var community = new imports.SteamCommunity();
+    var client = new SteamUser();
+    //var community = new SteamCommunity(); -> unused for now
 
-    let logOnOptions: logOnOptions = {
+    let logOnOptions = {
         accountName: accountConfig.login,
         password: accountConfig.password,
         rememberPassword: accountConfig.rememberPassword,
@@ -27,7 +27,7 @@ export default function Account(accountConfig: AccountConfig){
     });
 
     client.on('error', (err: Error) => console.log(`New error occured on ${logOnOptions.accountName}! Error: ${err}`));
-    client.on('friendRelationship', (steamID: SteamID64.ID, relationship: SteamRelationship["level"]) => {
+    client.on('friendRelationship', (steamID: any, relationship: any) => {
         if(relationship == 2){
             client.addFriend(steamID);
             client.chat.sendFriendMessage(steamID, `/me Thanks for adding me! Don't disrupt me, I'm playing Spectre Divide!`);
