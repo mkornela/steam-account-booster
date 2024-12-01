@@ -12,5 +12,16 @@ export default interface AccountConfig {
     //Game and profile details
     games: Array<number>,
     persona: number,
-    autoAcceptFriendRequests: boolean
+
+    steam: {
+        autoAcceptFriendRequests: boolean,
+        messagePrefixes: {
+            bot: string,
+            user: string
+        },
+        responses: {
+            friendAccepted: string
+        },
+        parentalPin: number | null
+    }
 }
