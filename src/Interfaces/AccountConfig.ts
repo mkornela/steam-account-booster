@@ -4,14 +4,19 @@ export default interface AccountConfig {
     password: string,
     steamID: string,
     mail?: object,
-    maFileData?: object,
+    maFileData?: {
+        sharedSecret: string,
+        identitySecret: string,
+        secret1: string,
+        tokenGid: string
+    },
     rememberPassword: boolean,
     machineName: string,
     clientOS: number,
     dontRememberMachine: boolean,
 
     //Game and profile details
-    games: Array<Number>,
+    games: Array<string | number>,
     persona: number,
 
     steam: {

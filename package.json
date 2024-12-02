@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
+    "@types/steam-totp": "^2.1.2",
     "@types/steam-tradeoffer-manager": "^2.11.0",
     "@types/steam-user": "^5.0.3",
     "@types/steamcommunity": "^3.43.7",
